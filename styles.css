@@ -1,0 +1,298 @@
+/* reset  */
+:root{
+    --clr-white:#FFFFFF;
+    --clr-gray-dark:#707070;
+    --clr-gray-medium:#888888;
+    --clr-gray-light:#00000029;
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body, h1, h2, h3, h4, h5, p, figure, picture{
+    margin: 0;
+}
+
+/* set up the body */
+
+body{
+    font-family: Arial, Helvetica, sans-serif ;
+    line-height: 1.5;
+    min-height: 100vh;
+    color: var(--clr-gray-medium);
+}
+
+/* make images easier to work with */
+a, button{
+   cursor: pointer; 
+}
+img, picture{
+    max-width: 100%;
+    min-width: 170px;
+    display: block;
+}
+/* make forms easier */
+
+input, button, textarea, select{
+    font: inherit;
+    color: var(--clr-gray-dark);
+}
+
+/* remove animations */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  @media(max-width:920px){
+    html{
+        font-size: 93.75%;
+    }
+}
+@media(max-width:720px){
+    html{
+        font-size: 87.5%;
+    }
+}
+
+  /* Utility classes */
+.flex{
+      display: flex;
+      gap:(var(--gap, 1rem)) ;
+      flex-wrap: wrap;
+  }
+.grid{
+        display: grid;
+        gap:(var(--gap, 1rem)) ;
+  }
+.container{
+    padding: 0 1.25rem ;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.bg-dark{
+    background-color: var(--clr-gray-dark);
+}
+.bg-dark p,.bg-dark h1, .bg-dark h2,.bg-dark h3,.bg-dark h4,.bg-dark h5{
+    color: var(--clr-white);
+}
+
+.text-white {
+    color: var(--clr-white);
+}
+.text-dark{
+    color: var(--clr-gray-dark);
+}
+.text-gray-medium{
+    color: var(--clr-gray-medium);
+}
+.text-gray-light{
+    color: var(--clr-gray-light);
+}
+
+
+button, label, p{
+    color: var(--clr-gray-medium);
+}
+button{
+    border: 1px solid var(--clr-gray-dark);
+    background-color: var(--clr-white);
+    font-weight: normal;
+    font-size: 1rem;
+}
+form>div{
+    display: grid;
+}
+form>div:nth-of-type(4){
+    display: flex;
+       
+}
+
+
+label{
+    font-size: 0.875rem;
+    margin-bottom: 7px;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+h2{
+    font-size: 1.25rem;
+}
+h3{
+    font-size: 1.125rem;
+}
+h5{
+    font-size: 0.875rem;
+    padding-bottom: 3.124rem;
+}
+
+.header{
+    padding-top: 4.75rem;
+    text-align: center;
+}
+
+.navigation{
+    padding-bottom: 4rem;
+
+}
+.navigation>div{
+    justify-content: space-around;
+}
+.navigation>div>button{
+    width: 160px;
+    height: 40px;  
+    
+}
+
+.data-person{
+    margin-top: 4rem;
+    margin-bottom: 6.25rem;
+    gap: 3.75rem;
+}
+.data-person h2{
+    margin-bottom: 30px;
+}
+.data-person p{
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.data-person article{
+   min-width: 360px;
+   flex: 1;
+}
+.data-form {
+    min-width: 340px;
+    
+} 
+.data-form>div{
+    margin-bottom: 1.25rem;
+}
+.data-form input{
+    height: 30px;
+
+}
+.data-form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+}
+.button-radios{
+    gap: 40px;
+    
+}
+.button-radios>div{
+    gap: 5px;
+    align-items: unset;
+}
+
+.vitrine>h3{
+    text-align: center;
+}
+.more{
+    text-align: center;
+    margin-bottom: 8rem;
+    
+}
+.more button, .share-news button{
+    width: 260px;
+    height: 30px;
+    border-radius: 4px;
+}
+.cards.flex{
+    gap: 2.5rem;
+    
+}
+.card{
+    max-width: 200px;
+    flex: 1 1 200px;
+}
+.card-content{
+    margin-left: 14px;
+    font-size: 0.75rem;
+    margin-bottom: 52px;
+   
+}
+.card-content p:first-child{
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+.card-content p:nth-of-type(3){
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 4px 0;
+}
+.card-content button{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+
+}
+
+.data>div:last-of-type{
+    display: flex;
+}
+.share-news{
+    text-align: center;
+    margin-bottom: 4.375rem;
+}
+.share-news h3, .share-news p{
+    text-align: center;
+    margin-bottom: 2.125rem;
+}
+.share-news p{
+    font-size: 0.875rem;
+}
+
+
+.form-content{
+    justify-content: space-around;
+
+}
+.form-content-data{
+    text-align: start;
+    margin-bottom: 3.125rem;
+}
+.form-content-data input{
+    width: 340px;
+    height: 30px;
+}
+.send{
+    justify-content: center;
+    
+}
+footer{
+    padding: 80px 0;
+    max-height: 300px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+
+}
+@media (max-width:420px){
+    .card{
+        display: flex;
+    }
+   
+}
