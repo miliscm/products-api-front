@@ -49,18 +49,23 @@
           est vel metus.
         </p>
       </article>
-      <form class="data-form" action="">
+      <form class="data-form" method="post" action="">
         <div>
           <label for="name">Seu nome:</label>
-          <input type="text" />
+          <input type="text" id="name" required />
         </div>
         <div>
           <label for="email">E-mail:</label>
-          <input type="email" id="email" />
+          <input type="email" id="email" required />
         </div>
         <div>
           <label for="cpf">CPF:</label>
-          <input type="text" />
+          <input
+            type="cpf"
+            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+            id="cpf"
+            required
+          />
         </div>
         <div class="button-radios flex">
           <div class="flex">
@@ -82,152 +87,7 @@
     </section>
     <section class="vitrine container">
       <h3>Sua seleção especial</h3>
-      <div class="cards flex">
-        <!-- <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div> -->
-        <!-- <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6670538"
-              alt=""
-            />
-          </div>
-          <div class="card-content">
-            <p>Nome do produto</p>
-            <p>
-              Descrição do produto um pouco maior, com duas linhas ou três que
-              explica melhor do que se trata.
-            </p>
-            <p>De: R$23,99</p>
-            <p>Por: R$19,99</p>
-            <button type="button">Comprar</button>
-          </div>
-        </div> -->
-      </div>
+      <div id="productsList" class="cards flex"></div>
       <div class="more">
         <button id="moreProducts" type="button">
           Ainda mais produtos aqui!
