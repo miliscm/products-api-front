@@ -228,6 +228,7 @@ h5{
 }
 .card{
     flex: 1 1 200px;
+    max-width: 200px;
 }
 .card-content{
     margin-left: 14px;
