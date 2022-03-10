@@ -205,11 +205,12 @@ h5{
 }
 .button-radios>div{
     gap: 5px;
-    align-items: unset;
+    align-items: flex-end;
 }
 
 .vitrine>h3{
     text-align: center;
+    margin-bottom: 3.125rem;
 }
 .more{
     text-align: center;
@@ -291,11 +292,19 @@ footer{
     text-align: center;
 }
 
+@media (max-width: 780px){
+    
+    .data-person{
+        justify-content: center;
+    }
+   
+}
 
 @media (max-width: 600px){
     .navigation>div{
         gap: 20px 0;
     }
+   
    
 }
 @media (max-width:420px){
@@ -303,6 +312,9 @@ footer{
     .card{
         display: flex;
 
+    }
+    .data-form{
+        width: 100%;
     }
    
 }
