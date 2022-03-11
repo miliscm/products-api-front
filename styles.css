@@ -298,7 +298,7 @@ footer{
     .data-person{
         justify-content: center;
     }
-   
+  
 }
 
 @media (max-width: 600px){
@@ -310,12 +310,12 @@ footer{
 }
 @media (max-width:420px){
     
-    .card{
-        display: flex;
-
-    }
     .data-form{
         width: 100%;
+    }
+    .card{
+        display: flex;
+        max-width: fit-content !important;
     }
    
 }
